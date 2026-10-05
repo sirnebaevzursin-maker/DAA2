@@ -53,7 +53,6 @@ for w in sorted({r["workload"] for r in rows}):
     variants = sorted({r["variant"] for r in rows if r["workload"] == w})
     structures = sorted({r["structure"] for r in rows if r["workload"] == w})
 
-    # --- время ---
     fig, axes = plt.subplots(1, len(variants), figsize=(6 * len(variants), 4.5), squeeze=False)
     for ax, v in zip(axes[0], variants):
         for s in structures:
